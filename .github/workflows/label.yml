@@ -40,24 +40,31 @@ jobs:
           npm install
           npm run build  # This generates the 'build' folder for deployment
 
-
-      - name: List Build Directory
+      # Step 4: List Build Directory to verify contents
+      - name: List Build Directory After Build
         run: |
-          ls -la 
+          ls -la
+          ls -la build/  # Verify the build directory is created
 
-      # Step 4: Deploy the Build to Hostinger via SSH
+      # Step 5: Deploy the Build to Hostinger via SSH
       - name: Deploy React App to Hostinger via SSH
         uses: appleboy/ssh-action@v0.1.4
         with:
-           host: 82.112.229.136
-           username: u267884831
-           key: ${{ secrets.HOSTINGER_SSH_KEY }}
-           port: 65002
-           script: |
-             echo "Checking contents of workspace:"
-              ls -la
-              echo "Checking contents of build directory:"
-              ls -la build/
+          host: 82.112.229.136
+          username: u267884831
+          key: ${{ secrets.HOSTINGER_SSH_KEY }}
+          port: 65002
+          script: |
+            echo "Checking contents of workspace:"
+            ls -la
+            echo "Checking contents of build directory:"
+            ls -la build/  # Check if the build directory exists in the workspace
+            if [ -d "build" ]; then
+              echo "Build directory found, proceeding with deployment."
               rm -rf /home/u267884831/domains/itzharsh.site/public_html/*
               cp -r build/* /home/u267884831/domains/itzharsh.site/public_html/
-           debug: true
+            else
+              echo "Build directory not found, skipping deployment."
+              exit 1
+            fi
+          debug: true
