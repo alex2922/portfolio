@@ -43,17 +43,21 @@ jobs:
 
       - name: List Build Directory
         run: |
-          ls -la build/
+          ls -la 
 
       # Step 4: Deploy the Build to Hostinger via SSH
       - name: Deploy React App to Hostinger via SSH
         uses: appleboy/ssh-action@v0.1.4
         with:
-          host: 82.112.229.136
-          username: u267884831
-          key: ${{ secrets.HOSTINGER_SSH_KEY }}
-          port: 65002
-          script: |
-            rm -rf /home/u267884831/domains/itzharsh.site/public_html/*
-            cp -r build/* /home/u267884831/domains/itzharsh.site/public_html/
-          debug: true
+           host: 82.112.229.136
+           username: u267884831
+           key: ${{ secrets.HOSTINGER_SSH_KEY }}
+           port: 65002
+           script: |
+             echo "Checking contents of workspace:"
+              ls -la
+              echo "Checking contents of build directory:"
+              ls -la build/
+              rm -rf /home/u267884831/domains/itzharsh.site/public_html/*
+              cp -r build/* /home/u267884831/domains/itzharsh.site/public_html/
+           debug: true
