@@ -1,0 +1,52 @@
+name: CI/CD with Labeling and Deployment
+
+on:
+  push:
+    branches:
+      - main  # Trigger deployment on push to 'main' branch
+  pull_request_target:
+    branches:
+      - main  # Trigger labeling for pull requests to 'main' branch
+
+jobs:
+  label:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+
+    steps:
+      - uses: actions/labeler@v4
+        with:
+          repo-token: "${{ secrets.GITHUB_TOKEN }}"
+
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    needs: label  # This ensures the build/deploy job runs after the label job
+    steps:
+      # Step 1: Checkout the repository
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      # Step 2: Set up Node.js environment
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'  # Use the Node.js version you want (adjust if necessary)
+
+      # Step 3: Install dependencies and build the app
+      - name: Install Dependencies and Build React App
+        run: |
+          npm install
+          npm run build  # This generates the 'build' folder for deployment
+
+      # Step 4: Deploy the Build to Hostinger via SSH
+      - name: Deploy React App to Hostinger via SSH
+        uses: appleboy/ssh-action@v0.1.0
+        with:
+          host: 82.112.229.136  # Updated IP address from SSH Access
+          username: u267884831  # Your SSH username from GitHub Secrets
+          key: ${{ secrets.HOSTINGER_SSH_KEY }}  # Your private SSH key from GitHub Secrets
+          port: 65002  # Updated port from SSH Access
+          source: "build/"  # React build folder (no need to update unless you use a custom build directory)
+          target: "/home/u267884831/domains/itzharsh.site/public_html/"  # Adjust the target directory on Hostinger
