@@ -49,4 +49,4 @@ jobs:
           key: ${{ secrets.HOSTINGER_SSH_KEY }}  # Your private SSH key from GitHub Secrets
           port: 65002  # Updated port from SSH Access
           source: "build/"  # React build folder (no need to update unless you use a custom build directory)
-          target: "/home/u267884831/domains/itzharsh.site/public_html/"  # Adjust the target directory on Hostinger
+          target: "/home/u267884831/domains/itzharsh.site/public_html/new"  # Adjust the target directory on Hostinger
