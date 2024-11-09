@@ -50,5 +50,5 @@ jobs:
           port: 65002  # Updated port from SSH Access
           source: "build/"  # React build folder (no need to update unless you use a custom build directory)
           target: "/home/u267884831/domains/itzharsh.site/public_html/"
-          script: "echo 'test' > /home/u267884831/domains/itzharsh.site/public_html/new/test.txt"
+          script: "echo 'test' > /home/u267884831/domains/itzharsh.site/public_html/test.txt"
           debug: true  # Adjust the target directory on Hostinger
