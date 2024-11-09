@@ -40,15 +40,20 @@ jobs:
           npm install
           npm run build  # This generates the 'build' folder for deployment
 
+
+      - name: List Build Directory
+        run: |
+          ls -la build/
+
       # Step 4: Deploy the Build to Hostinger via SSH
       - name: Deploy React App to Hostinger via SSH
         uses: appleboy/ssh-action@v0.1.4
         with:
-          host: 82.112.229.136  # Updated IP address from SSH Access
-          username: u267884831  # Your SSH username from GitHub Secrets
-          key: ${{ secrets.HOSTINGER_SSH_KEY }}  # Your private SSH key from GitHub Secrets
-          port: 65002  # Updated port from SSH Access
-          source: "build/"  # React build folder (no need to update unless you use a custom build directory)
-          target: "/home/u267884831/domains/itzharsh.site/public_html/"
-          script: "echo 'test' > /home/u267884831/domains/itzharsh.site/public_html/test.txt"
-          debug: true  # Adjust the target directory on Hostinger
+          host: 82.112.229.136
+          username: u267884831
+          key: ${{ secrets.HOSTINGER_SSH_KEY }}
+          port: 65002
+          script: |
+            rm -rf /home/u267884831/domains/itzharsh.site/public_html/new/*
+            cp -r build/* /home/u267884831/domains/itzharsh.site/public_html/new/
+          debug: true
