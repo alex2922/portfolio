@@ -54,6 +54,6 @@ jobs:
           key: ${{ secrets.HOSTINGER_SSH_KEY }}
           port: 65002
           script: |
-            rm -rf /home/u267884831/domains/itzharsh.site/public_html/new/*
-            cp -r build/* /home/u267884831/domains/itzharsh.site/public_html/new/
+            rm -rf /home/u267884831/domains/itzharsh.site/public_html/*
+            cp -r build/* /home/u267884831/domains/itzharsh.site/public_html/
           debug: true
