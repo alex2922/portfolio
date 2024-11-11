@@ -1,0 +1,50 @@
+.header {
+  position: fixed;
+  bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  width: 100%;
+  z-index: 100;
+
+  .dock {
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    transition: var(--trans-q);
+
+    &:hover{
+        transform: scale(1.05);
+    }
+
+    a {
+      cursor: pointer;
+      transition: var(--trans-q);
+
+      &:hover {
+        color: var(--accent);
+      }
+
+      img{
+        height: 40px;
+        
+      }
+    }
+  }
+}
+
+
+.overlay{
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.326);
+    position: fixed;
+    z-index: -100;
+
+    &.active{
+        z-index: 100;
+    }
+}
