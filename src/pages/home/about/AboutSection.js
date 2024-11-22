@@ -1,15 +1,36 @@
 import React from 'react'
 import './AboutSection.scss'
 
+
+
+
+var h2classes = "motion-translate-x-in-[200%] motion-translate-y-in-[38%] motion-rotate-in-[100deg]"
+
+
+
+
+
+
 function AboutSection() {
   return (
     <div className='about-section parent'>
 
-        <div className="container about-section-container">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus fugiat neque quisquam necessitatibus. Incidunt ducimus dolorem dignissimos id repudiandae exercitationem labore voluptates enim perferendis facere eum recusandae eius minima laboriosam porro voluptatum rem, eligendi necessitatibus natus reprehenderit autem, asperiores laudantium quam totam. Ipsa cupiditate provident sapiente distinctio fuga modi adipisci, deserunt repellat maiores excepturi possimus! Porro accusantium eligendi vitae ducimus dolores incidunt voluptates doloremque! Laudantium quae voluptatem aspernatur ipsam debitis odio consequatur quasi unde rerum cum, molestiae ducimus itaque omnis adipisci nostrum iure aperiam recusandae? Nulla doloribus, natus nemo exercitationem fugit voluptas, unde delectus obcaecati aut amet iusto, omnis accusamus consequuntur? Saepe omnis accusamus iure? Rerum possimus voluptatem at dicta optio veniam sunt voluptas iste sint dolorum aperiam libero consequuntur nemo quod sit nostrum exercitationem magnam voluptatibus similique ipsa magni, explicabo obcaecati quibusdam pariatur. Amet quasi neque perferendis, atque officiis itaque porro necessitatibus molestias nesciunt adipisci ad sapiente quae, at commodi. Maxime ipsam officia laboriosam alias sequi, nobis nostrum molestiae placeat. Unde exercitationem, praesentium sequi dolore distinctio at in maxime vel voluptatum, suscipit adipisci nulla laboriosam, cumque neque veritatis ipsa perferendis. Enim, rem accusamus modi voluptas tenetur consectetur omnis corrupti tempora necessitatibus odit consequuntur deleniti error officia repellendus unde natus autem, hic eaque voluptate distinctio assumenda neque. Eligendi, quo tenetur voluptas aperiam dolores rem facere sint. Quisquam officia totam quos deleniti voluptatum, quae nam modi autem optio odio magni pariatur ipsum magnam expedita, ut asperiores, enim dolorem mollitia! Earum repellat quo libero? Culpa quasi eos modi rerum consectetur. Nobis veniam, maxime saepe debitis, incidunt quo atque omnis inventore ducimus ut nostrum amet? Quaerat sint aliquam animi maxime numquam assumenda quod nulla consequuntur impedit omnis! Officiis eligendi ipsam labore neque delectus doloremque itaque quaerat. Iusto, eveniet unde. Explicabo saepe labore modi, pariatur quam adipisci magnam incidunt expedita aspernatur iure ipsa officiis asperiores corrupti repellendus! Magnam, sapiente doloribus. Iusto voluptatibus officia voluptas doloremque molestiae ea animi officiis facere excepturi aspernatur, fuga mollitia reiciendis aliquid vero velit? Expedita molestias laudantium voluptas fuga et nesciunt accusamus tenetur. Earum nihil culpa pariatur soluta! Maxime aperiam nobis, enim numquam aliquid, fugiat incidunt nesciunt voluptas ullam distinctio non placeat. Facere doloribus provident consequuntur laboriosam ut aut, aperiam enim id fugit labore, autem cupiditate fugiat laudantium illum. Voluptate autem iste deleniti, ad saepe cum esse dolor optio! Aperiam cupiditate voluptatibus doloribus minima minus similique tenetur natus numquam odit sapiente sequi dolorem, dolore ab ea ad, explicabo cumque iste error aliquam. Nesciunt cum repellendus laudantium praesentium veniam doloribus tempore at voluptatibus incidunt, officiis, est quos vitae assumenda fuga sunt, nobis natus dolorem soluta velit asperiores. Aut quas quasi cumque commodi, reprehenderit officia adipisci nemo sunt odit debitis error ipsa reiciendis facere autem totam, at vitae animi! Dicta voluptates sapiente necessitatibus ab. Laborum iusto facilis molestias sunt dolorum reprehenderit quia modi ex aliquid! Est accusamus veniam nemo modi reiciendis praesentium dolores, iusto animi quibusdam officiis possimus voluptas rem ut, perferendis, tenetur minima mollitia magnam odio esse sint perspiciatis eos? Ducimus eos hic ut optio quia! Harum qui assumenda nihil optio.</p>
+      <div className="container about-section-container">
 
-        </div>
+
+        <p className='style'>Know Me</p>
       
+          <h2 className={h2classes}>About Me</h2>
+
+
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt amet eius, quas voluptate delectus similique veniam reprehenderit possimus magnam maiores optio velit beatae minus quos tenetur accusamus rem itaque voluptatibus ratione omnis consectetur nulla quis! Consectetur inventore incidunt tenetur repellat.
+        </p>
+
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt amet eius, quas voluptate delectus similique veniam reprehenderit possimus magnam maiores optio velit beatae minus quos tenetur accusamus rem itaque voluptatibus ratione omnis consectetur nulla quis! Consectetur inventore incidunt tenetur repellat.
+        </p>
+
+      </div>
+
     </div>
   )
 }

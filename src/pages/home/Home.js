@@ -2,6 +2,7 @@ import React from 'react'
 import './Home.scss'
 import Hero from './hero/Hero'
 import AboutSection from './about/AboutSection'
+import ExpSection from './exp/ExpSection'
 
 function Home() {
   return (
@@ -12,6 +13,7 @@ function Home() {
 
         <Hero />
         <AboutSection/>
+        <ExpSection/>
 
         
         
