@@ -2,6 +2,8 @@ import React from "react";
 import "./Hero.scss";
 import icon from "../../../assets/icon.gif";
 import { Link } from "react-router-dom";
+import { FaDownload } from "react-icons/fa6";
+import { FaGithub } from "react-icons/fa6";
 
 function Hero() {
   return (
@@ -9,9 +11,15 @@ function Hero() {
       <div className="hero-container container">
         <img src={icon} alt="" />
         <h1>Harshvardhan Singh</h1>
-        <p className="tag">Developer & Designer</p>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est dolorem tempore excepturi harum animi uis officiis fugiat totam aspernatur </p>
-        <Link to="#"><button className="btn">About Me</button></Link>
+        <p>
+        Hi, I’m Harsh, a passionate <span>Web Developer</span> and <span>Designer</span> from India. I create stunning, user-friendly websites that blend creativity with functionality to bring your digital vision to life.
+        </p>
+       <div className="btn-box">
+       <Link to="#" className="btn">Contact Me</Link>
+       <Link to="#" className="btn c"><FaDownload /></Link>
+       <Link to="#" className="btn c"><FaGithub /></Link>
+
+       </div>
       </div>
     </div>
   );

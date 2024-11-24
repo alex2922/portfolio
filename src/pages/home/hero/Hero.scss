@@ -20,6 +20,38 @@
             margin-bottom: -10px;
         }
 
+        .btn-box{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+           
+            .btn{
+                color: var(--black);
+                transition: var(--trans);
+                svg{
+                    color: var(--black);
+                    fill: var(--accent);
+                    transition: var(--trans);
+                }
+                &.c{
+                    aspect-ratio: 1;
+                    height: 46px;
+                    padding: 0px;
+                    border: 2px solid var(--accent);
+                    background: transparent;
+                    &:hover{
+                        background: var(--accent-gradient);
+
+                        svg{
+                            fill: var(--black);
+                        }
+                    }
+                    
+                }
+            }
+        }
+
 
 
 

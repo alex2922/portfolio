@@ -1,5 +1,6 @@
 import React from 'react'
 import './AboutSection.scss'
+import { Link } from 'react-router-dom'
 
 
 
@@ -28,6 +29,8 @@ function AboutSection() {
 
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt amet eius, quas voluptate delectus similique veniam reprehenderit possimus magnam maiores optio velit beatae minus quos tenetur accusamus rem itaque voluptatibus ratione omnis consectetur nulla quis! Consectetur inventore incidunt tenetur repellat.
         </p>
+
+        <Link className='btn' to="/#contact">Contact Me</Link>
 
       </div>
 

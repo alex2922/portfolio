@@ -8,11 +8,11 @@ function ExpCard(props) {
 
             <div className="top">
                 <div className="left">
-                    <h4>{props.company}</h4>/
+                    <h4>{props.company}</h4>
                     <p>{props.role}</p>
                 </div>
                 <div className="right">
-                    <p>{props.from} - {props.to}</p>
+                    <p>{props.from} <br /> {props.to}</p>
                 </div>
             </div>
                     <p>{props.desc}</p>
