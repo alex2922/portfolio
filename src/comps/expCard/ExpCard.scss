@@ -1,26 +1,44 @@
 .expcard {
-    opacity: 1;
-    border: 1px solid rgba(255, 255, 255, 0.295);
-    padding: 20px 20px 0px 20px;
-    border-radius: 30px;
-    background: rgba(0, 0, 0, 0.144);
-    backdrop-filter: blur(2px);
+
+    padding: 30px ;
+    border-radius: 20px;
     width: 100%;
-    // background: red;
+    border: 1px solid rgba(255, 255, 255, 0.191);
+    background: rgba(0, 0, 0, 0.432);
+    max-width: 800px;
+
 
     .top{
         display: flex;
         width: 100%;
         justify-content: space-between;
         align-items: center;
+
         .left{
             display: flex;
             flex-direction: column;
+    
 
             p{
                 margin-top: -20px;
+                color: var(--accent);
+                font-size: 14px;
             }
 
+        }
+        .right{
+            display: flex;
+            align-items: flex-start;
+
+            margin-top: -20px;
+  
+            p{
+               strong{
+                text-transform: capitalize;
+                color: var(--accent);
+               }
+
+            }
         }
 
         
@@ -28,7 +46,9 @@
 
     p{
         max-width: 100% !important;
-        text-align: left;
+        text-align: justify;
+        font-size: 14px;
+        line-height: 20px;
     }
 
     .tags{
@@ -36,9 +56,56 @@
         flex-wrap: wrap;
         gap: 10px;
         margin-top: 10px;
+        text-transform: capitalize;
+
+        height: 30px;
 
     }
 
 
 
 }
+
+@media only screen and (max-width:920px) {
+
+    .expcard {
+        padding: 10px ;
+    }
+
+
+    .swiper-button-next , .swiper-button-prev{
+        display: none !important;
+       }
+
+
+       .tag {
+        padding: 4px 18px;
+        background: rgba(0, 0, 0, 0.1);
+        border-radius: 100px;
+        border: 1px solid rgba(255, 255, 255, 0.247);
+        width: fit-content;
+        position: relative;
+        font-size: 10px !important;
+        cursor: pointer;
+      
+      }
+    
+    
+}
+
+@media only screen and (max-width:600px) {
+
+    .expcard .top{
+        flex-direction: column;
+
+        .left ,.right{
+            display: flex;
+            flex-direction: column;
+            justify-content: left;
+            align-items: flex-end;
+        }
+    }
+   
+}
+
+

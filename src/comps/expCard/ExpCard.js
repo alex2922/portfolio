@@ -12,10 +12,10 @@ function ExpCard(props) {
                     <p>{props.role}</p>
                 </div>
                 <div className="right">
-                    <p>{props.from} <br /> {props.to}</p>
+                    <p> <strong>{props.from}</strong> to <strong>{props.to}</strong></p>
                 </div>
             </div>
-                    <p>{props.desc}</p>
+            <p>{props.desc}</p>
             <div className="tags">
                 {props.tags && props.tags.map((tag) => {
                     return <p className='tag'> {tag}</p>;

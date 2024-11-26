@@ -6,11 +6,7 @@ import JSConfetti from 'js-confetti'
 
 const jsConfetti = new JSConfetti()
 
-jsConfetti.addConfetti({
-  confettiColors: [
-    '#ff0a54', '#ff477e', '#ff7096', '#ff85a1', '#fbb1bd', '#f9bec7',
-  ],
-})
+// onClick={(e) => { e.preventDefault(); jsConfetti.addConfetti() }}
 
 
 
@@ -23,7 +19,7 @@ function Header() {
         <div className="dock glass">
           <Link to="/">About</Link>
           <Link to="/">Contact</Link>
-          <Link onClick={(e) => { e.preventDefault(); jsConfetti.addConfetti() }}> <img src={icon} alt="harsh memoji" />  </Link>
+          <Link > <img src={icon} alt="harsh memoji" />  </Link>
           <Link to="/">Projects</Link>
           <Link to="/">Hobbies</Link>
 

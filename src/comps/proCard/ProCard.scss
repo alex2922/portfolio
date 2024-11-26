@@ -1,0 +1,28 @@
+.pro-card{
+    width: 300px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    position: relative;
+   
+
+    .imgbox{
+        background: url("https://cdn.dribbble.com/userupload/13762642/file/original-87dcd6c29bb6d02f6f42a36441eb2a94.png?resize=1024x768&vertical=center");
+        width: calc(100% - 20px);
+        aspect-ratio: 16/12;
+        border-radius: 5px;
+        top: -150px;
+        position: absolute;
+        
+    }
+
+    h3{
+        text-align: center;
+        margin-top: 15px;
+        color: var(--accent);
+    }
+
+    
+   
+}

@@ -3,6 +3,7 @@ import './Home.scss'
 import Hero from './hero/Hero'
 import AboutSection from './about/AboutSection'
 import ExpSection from './exp/ExpSection'
+import ProjectSection from './project/ProjectSection'
 
 function Home() {
 
@@ -18,6 +19,7 @@ function Home() {
         <Hero />
         <AboutSection/>
         <ExpSection/>
+        <ProjectSection/>
 
         
         

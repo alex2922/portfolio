@@ -2,11 +2,18 @@ import React, { useEffect, useState } from "react";
 import "./ExpSection.scss";
 import App from "../../../Firebase";
 import ExpCard from "../../../comps/expCard/ExpCard";
-import { notification, Button } from 'antd';
+import { notification } from 'antd';
 import 'antd/dist/reset.css'; 
 import { getFirestore, collection, getDocs } from "firebase/firestore"; 
-const db = getFirestore(App);
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
+
+
+const db = getFirestore(App); 
 function ExpSection() {
 
 
@@ -44,7 +51,7 @@ function ExpSection() {
   }, []);
 
 
-  console.log(experiences[0]);
+ 
 
 
 
@@ -55,11 +62,30 @@ function ExpSection() {
         <p className="style">Know Me</p>
         <h2 className="">My Experiences</h2>
 
-        {/* <ExpCard  /> */}
-
-        {experiences.slice(0,1).map((exp)=>{
-          return <ExpCard key={exp.id} company={exp.company} role={exp.role} from={exp.from} to={exp.to} desc={exp.desc} tags={exp.tech} />
+        <Swiper
+        spaceBetween={30}
+        centeredSlides={true}
+        autoplay={{
+          delay: 5000,
+          disableOnInteraction: false,
+        }}
+        pagination={{
+          clickable: true,
+        }}
+        navigation={true}
+        modules={[Autoplay, Pagination, Navigation]}
+        className="mySwiper"
+      >
+   
+       {experiences.map((exp)=>{
+          return <SwiperSlide>
+          <ExpCard key={exp.id} company={exp.company} role={exp.role} from={exp.from} to={exp.to} desc={exp.desc} tags={exp.tech} />
+          </SwiperSlide>
         })}
+      
+      </Swiper>
+
+      
 
        
       </div>

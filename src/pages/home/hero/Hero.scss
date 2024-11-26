@@ -41,7 +41,8 @@
                     border: 2px solid var(--accent);
                     background: transparent;
                     &:hover{
-                        background: var(--accent-gradient);
+                        background: var(--accent);
+
 
                         svg{
                             fill: var(--black);
