@@ -5,6 +5,10 @@ import AboutSection from './about/AboutSection'
 import ExpSection from './exp/ExpSection'
 
 function Home() {
+
+
+
+
   return (
     <div className='home'>
 
